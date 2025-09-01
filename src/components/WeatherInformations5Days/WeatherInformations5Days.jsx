@@ -40,5 +40,27 @@ function WeatherInformations5Days({ Weather5Days }) {
         </div>
     );
 }
-
+function getWeatherIcon(iconCode) {
+  const iconMap = {
+    '01d': 'day-sunny',
+    '01n': 'night-clear',
+    '02d': 'day-cloudy',
+    '02n': 'night-cloudy',
+    '03d': 'cloudy',
+    '03n': 'cloudy',
+    '04d': 'cloudy',
+    '04n': 'cloudy',
+    '09d': 'rain',
+    '09n': 'rain',
+    '10d': 'day-rain',
+    '10n': 'night-rain',
+    '11d': 'thunderstorm',
+    '11n': 'thunderstorm',
+    '13d': 'snow',
+    '13n': 'snow',
+    '50d': 'fog',
+    '50n': 'fog',
+  };
+  return iconMap[iconCode] || 'day-sunny'; // Default to sunny if no match
+}
 export default WeatherInformations5Days;
